@@ -54,3 +54,52 @@ mixedArray.forEach(element => {
 console.log("Banana is a ",mixedArray[1].length," chars long")
 
 // add elements to an array
+mixedArray.push("apple");
+
+mixedArray.unshift();
+
+// delete the last element
+mixedArray.pop();
+
+// delete the first element
+mixedArray.shift();
+
+// add an element to the beginning of the array
+mixedArray.splice(1,1);
+mixedArray.forEach(element=> {
+    console.log("Updated array ", element);
+});
+
+// objects literals
+const person = {
+    firstName: "Ben",
+    lastName: "Dover",
+    age: 23,
+    email: "ben.dover@gmail.com",
+    hobbies: ['music', 'sports'],
+
+    getYearOfBirth: function() {
+        return 2019 - this.age;
+    }
+}
+
+let val;
+val = person;
+val = person.firstName;
+val = person.lastName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1]
+val = person.getYearOfBirth();
+console.log(val);
+
+const people = [
+    {name: "Ben", age: 23},
+    {name: "Sarah", age: 28},
+    {name: "brfxxccxxmnpcccclllmmnprxvclmnckssqlbb11116", age: 18},
+]
+ 
+people.forEach(person => {
+    console.log(person.name, " is ",person.age, " years old")
+});
+
